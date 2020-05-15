@@ -12,37 +12,6 @@
 
 3. 可视化一下==>可视化。
 
-sessionid 获取, 问题是code会过期，所以就不能在线获取用户的数据，但是我们可以爬下来之后，对每个用户进行处理。
-
-```http
-GET /data_chart/chart_verify_count.php?code=&{code}&state=1 HTTP/1.1
-Host: ecardwx.ccnu.edu.cn
-Upgrade-Insecure-Requests: 1
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.11(0x17000b21) NetType/WIFI Language/zh_CN
-Accept-Language: zh-cn
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-```
-
-
-请求如下，是校园卡中心微信上抓包过来的。
-
-```http
-POST /data_chart/ecard_deal/month_deal_list.php?m_xxh=${sid} HTTP/1.1
-Host: ecardwx.ccnu.edu.cn
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Encoding: gzip, deflate
-Accept-Language: zh-cn
-Content-Type: application/x-www-form-urlencoded
-Origin: http://ecardwx.ccnu.edu.cn
-User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.11(0x17000b21) NetType/4G Language/zh_CN
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Referer: http://ecardwx.ccnu.edu.cn/data_chart/ecard_deal/month_deal_main.php?m_xxh=${sid}
-Content-Length: 17
-Cookie:   #会过期、
-```
 
 ## 开发规范
 
