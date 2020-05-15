@@ -49,3 +49,19 @@ Cookie:   #会过期、
 1. 使用pipenv,对虚拟环境和依赖管理。
 2. 命名规范：待定
 3. 注释规范：待定
+
+## 项目目录结构
+
+```
+/
+   __init__.py
+   routes/
+   models/
+   templates/
+      index.html
+   static/
+      style.css
+   util/
+      wordcloud/
+      graph/
+```
