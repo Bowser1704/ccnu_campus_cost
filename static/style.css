@@ -1,0 +1,76 @@
+.header{
+    height: 200px;
+    width: 100%;
+    /* background-color: #9a9a9a; */
+    position: relative;
+    /* top: 50%;
+    margin-top: -50px;
+    z-index: 2; */
+}
+.header .pic{
+    height: 120px;
+    width: 120px;
+    float: left;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 20%;
+    top:50%;
+    margin-top: -60px;
+    background: url(../static/image/头像\ 女孩.png) center no-repeat;
+    background-size: cover;
+}
+.header .input{
+    height: 120px;
+    width: 200px;
+    float: right;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    margin-top: -60px;
+
+}
+
+.header .input input{
+    outline-style: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 200px;
+    font-size: 16px;
+    font-family: 'Microsoft soft';
+    background-color: #fff;
+}
+.header .input #name{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.header .input #stuId{
+    padding: 10px;
+    margin-top: 20px;
+}
+.content .data{
+    height: 850px;
+    width: 100%;
+    background-color: pink;
+
+}
+.content .data h1{
+    font-size: 60px;
+    height: 850px;
+    line-height: 850px;
+    text-align: center;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    background: #07cbc9;
+    /* margin-top: 40px; */
+}
+.footer p{
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
