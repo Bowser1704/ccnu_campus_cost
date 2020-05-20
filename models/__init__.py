@@ -4,4 +4,11 @@ from routes import app
 db = SQLAlchemy(app)
 
 class Cost(db.Model):
-    db.Column(db.Integer, primary_key=True)
+    __tablename__ = 'stu3'
+    
+    stunum = db.Column(db.String, primary_key=True)
+    time = db.Column(db.String, primary_key=True)
+    place = db.Column(db.String, primary_key=True)
+    restaurant = db.Column(db.String, primary_key=False)
+    cost = db.Column(db.Float, default = 0.0, primary_key=False)
+
