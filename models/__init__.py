@@ -1,7 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from routes import app
-
-db = SQLAlchemy(app)
+from routes import app,db
 
 class Cost(db.Model):
     __tablename__ = 'stu3'
