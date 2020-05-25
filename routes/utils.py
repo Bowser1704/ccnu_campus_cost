@@ -3,10 +3,10 @@ from flask import jsonify
 
 
 def get_conn():
-    conn = pymysql.connect(host="47.100.3.74",
-                           user="pystudyuser",
-                           password="pystudyuser",
-                           db="stu_data",
+    conn = pymysql.connect(host="127.0.0.1",
+                           user="",
+                           password="",
+                           db="",
                            charset="utf8")
 
     cursor = conn.cursor()

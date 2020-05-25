@@ -16,8 +16,10 @@
 ## 开发规范
 
 1. 使用pipenv,对虚拟环境和依赖管理。
-2. 命名规范：待定
-3. 注释规范：待定
+2. 数据库使用环境变量
+   ```bash
+   export CAMPUS_DATABASE_URI="mysql+pymysql://username:password@host/dbname"
+   ```
 
 ## 项目目录结构
 
@@ -25,11 +27,12 @@
 /
    __init__.py
    routes/
+      templates/
+         index.html
+      static/
+         style.css
    models/
-   templates/
-      index.html
-   static/
-      style.css
+   
    util/
       wordcloud/
       graph/
