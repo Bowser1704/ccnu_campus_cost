@@ -78,15 +78,9 @@ def get_most_restaurant(stu_num):
 
 @result2dict
 def get_cost_rank():
-<<<<<<< HEAD
-    sql = "SELECT stunum,sum(`cost`)AS costsum FROM stu3 GROUP BY stunum ORDER BY costsum DESC LIMIT 30"
-=======
-<<<<<<< HEAD
-    sql = "SELECT stunum,sum(`cost`)AS costsum FROM stu3 GROUP BY stunum ORDER BY costsum DESC LIMIT 30"
-=======
+
     sql = "SELECT stunum,sum(`cost`)AS costsum FROM stu3 GROUP BY stunum ORDER BY costsum DESC LIMIT 10"
->>>>>>> cda0e9c65e6e7bfcc079e49e66e5575e575497f5
->>>>>>> master
+
     result = db.engine.execute(sql)
     return result
 
