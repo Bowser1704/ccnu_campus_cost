@@ -7,23 +7,42 @@
     <title>CCNU_CAMPUS_COST</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/base.css">
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
     <div class="header">
         <div class="pic"></div>
         <div class="input">
-            <input type="text" name="name" id="name">
-            <input type="text" name="stuId" id="stuId">
+            <input type="text" name="name" id="name" placeholder="姓名">
+            <input type="text" name="stuId" id="stuId" placeholder="学号">
         </div>
+    </div>
+    <div class="cf"></div>
+    <div class="rank">
+        <h1>排行榜</h1>
     </div>
     <div class="cf"></div>
     <div class="content">
         <div class="data">
-            <h1>可视化内容</h1>
+            <div class="data_left">
+                <div id="l1"></div>
+                <div id="l2"></div>
+            </div>
+            <div class="data_right">
+                <div id="r1"></div>
+                <div id="r2"></div>
+            </div>
         </div>
     </div>
     <div class="footer">
         <p>&copy;2020 CCNU_CAMPUS_COST.com 京ICP备13046642号o(*￣▽￣*)ブ</p>
     </div>
+    <script src="../static/js/controller.js"></script>
+    <script src="../static/js/ec_left1.js"></script>
+    <script src="../static/js/ec_left2.js"></script>
+    <script src="../static/js/ec_right1.js"></script>
+    <script src="../static/js/ec_right2.js"></script>
 </body>
 </html>
