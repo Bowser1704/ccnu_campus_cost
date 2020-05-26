@@ -1,3 +1,6 @@
+body{
+    min-width: 1000px;
+}
 .header{
     height: 200px;
     width: 100%;
@@ -52,12 +55,45 @@
     width: 100%;
     height: 400px;
     background-color: lightgreen;
+    position: relative;
 }
-.content .data{
+.rank .data_first{
+    width: 50%;
+    height: 400px;
+    background-color: #fff;
+}
+#cost_most{
+	width: 100%;
+	height: 100%;
+	top: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+/* .wordcloud{
+    background: url("/wc/2017211652.png");
+} */
+
+
+
+
+
+
+
+
+
+
+
+.content {
     height: 900px;
     width: auto;
     background-color: pink;
 
+}
+.content .data{
+    height: 900px;
+    width: auto;
+    display: none;
 }
 
 .content .data .data_left{
@@ -72,7 +108,7 @@
     width: 45%;
     height: 900px;
 }
-
+/* 底部 */
 .footer{
     width: 100%;
     height: 80px;

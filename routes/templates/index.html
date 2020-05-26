@@ -3,13 +3,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>CCNU_CAMPUS_COST</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/base.css">
     <link rel="stylesheet" href="../static/main.css">
     <script src="../static/js/echarts.min.js"></script>
     <script src="../static/js/jquery-1.12.4.min.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("http://api.tianapi.com/txapi/ncovcity/index?key=3e26d27ac31d3d77789885a711142326",
+                function(data,status){
+		            console.log(data);
+		            $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
+                    alert("状态码：" + data.code + "\n消息：" + data.msg);
+                });
+            });
+        });
+    </script> -->
 </head>
 <body>
     <div class="header">
@@ -21,7 +33,13 @@
     </div>
     <div class="cf"></div>
     <div class="rank">
-        <h1>排行榜</h1>
+        <!-- <h1>排行榜</h1> -->
+        <div class="data_first">
+            <div id="cost_most"></div>
+        </div>
+        <!-- <button>get</button>
+        <div id="result"></div> -->
+        <!-- <div class="wordcloud"></div> -->
     </div>
     <div class="cf"></div>
     <div class="content">
@@ -44,5 +62,6 @@
     <script src="../static/js/ec_left2.js"></script>
     <script src="../static/js/ec_right1.js"></script>
     <script src="../static/js/ec_right2.js"></script>
+    <script src="../static/js/staticCostMost.js"></script>
 </body>
 </html>
