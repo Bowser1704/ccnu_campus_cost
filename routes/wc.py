@@ -11,4 +11,4 @@ def wc(stu_num=None):
     print(file_path)
     if not Path(file_path).is_file():
         generate.generate_place(stu_num)
-    return send_file(file_path, as_attachment=True)
+    return send_file(file_path, as_attachment=False)
