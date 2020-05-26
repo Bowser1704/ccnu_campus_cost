@@ -4,10 +4,14 @@ from flask import jsonify
 
 def get_conn():
 <<<<<<< HEAD
+    conn = pymysql.connect(host="127.0.0.1",
+=======
+<<<<<<< HEAD
     conn = pymysql.connect(host="localhost",
 =======
     conn = pymysql.connect(host="127.0.0.1",
 >>>>>>> 7424e1c... feat: add db func
+>>>>>>> cda0e9c65e6e7bfcc079e49e66e5575e575497f5
                            user="",
                            password="",
                            db="",
@@ -49,4 +53,8 @@ def get_r2_data():
 
 
 if __name__=="__main__":
+<<<<<<< HEAD
     print(get_r1_data())
+=======
+    print(get_r1_data())
+>>>>>>> cda0e9c65e6e7bfcc079e49e66e5575e575497f5

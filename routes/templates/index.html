@@ -3,27 +3,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>CCNU_CAMPUS_COST</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/base.css">
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/jquery-1.12.4.min.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("http://api.tianapi.com/txapi/ncovcity/index?key=3e26d27ac31d3d77789885a711142326",
+                function(data,status){
+		            console.log(data);
+		            $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
+                    alert("状态码：" + data.code + "\n消息：" + data.msg);
+                });
+            });
+        });
+    </script> -->
 </head>
 <body>
     <div class="header">
         <div class="pic"></div>
         <div class="input">
-            <input type="text" name="name" id="name">
-            <input type="text" name="stuId" id="stuId">
+            <input type="text" name="name" id="name" placeholder="姓名">
+            <input type="text" name="stuId" id="stuId" placeholder="学号">
+            <p class="button">
+                <a href="javascript:void(0)" id="sigup-btn" class="btn">查询</a>
+            </p>
         </div>
+    </div>
+    <div class="cf"></div>
+    <div class="rank">
+        <!-- <h1>排行榜</h1> -->
+        <div class="data_first">
+            <div id="cost_most"></div>
+        </div>
+        <!-- <button>get</button>
+        <div id="result"></div> -->
+        <!-- <div class="wordcloud"></div> -->
     </div>
     <div class="cf"></div>
     <div class="content">
         <div class="data">
-            <h1>可视化内容</h1>
+            <div class="data_left">
+                <div id="l1"></div>
+                <div id="l2"></div>
+            </div>
+            <div class="data_right">
+                <div id="r1"></div>
+                <div id="r2"></div>
+            </div>
         </div>
     </div>
     <div class="footer">
         <p>&copy;2020 CCNU_CAMPUS_COST.com 京ICP备13046642号o(*￣▽￣*)ブ</p>
     </div>
+    <script src="../static/js/controller.js"></script>
+    <script src="../static/js/ec_left1.js"></script>
+    <script src="../static/js/ec_left2.js"></script>
+    <script src="../static/js/ec_right1.js"></script>
+    <script src="../static/js/ec_right2.js"></script>
+    <script src="../static/js/staticCostMost.js"></script>
+    <script src="../static/js/login.js"></script>
 </body>
 </html>

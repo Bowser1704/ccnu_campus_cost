@@ -1,3 +1,6 @@
+body{
+    min-width: 1000px;
+}
 .header{
     height: 200px;
     width: 100%;
@@ -26,7 +29,7 @@
     float: right;
     position: absolute;
     right: 30%;
-    top: 50%;
+    top: 35%;
     margin-top: -60px;
 
 }
@@ -48,19 +51,79 @@
     padding: 10px;
     margin-top: 20px;
 }
-.content .data{
-    height: 850px;
+.button{
+    padding-top: 7px;
+}
+.button a{
+    display: block;
     width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    background: #f20d0d;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+}
+.rank{
+    width: 100%;
+    height: 400px;
+    background-color: lightgreen;
+    position: relative;
+}
+.rank .data_first{
+    width: 50%;
+    height: 400px;
+    background-color: #fff;
+}
+#cost_most{
+	width: 100%;
+	height: 100%;
+	top: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+/* .wordcloud{
+    background: url("/wc/2017211652.png");
+} */
+
+
+
+
+
+
+
+
+
+
+
+.content {
+    height: 900px;
+    width: auto;
     background-color: pink;
 
 }
-.content .data h1{
-    font-size: 60px;
-    height: 850px;
-    line-height: 850px;
-    text-align: center;
+.content .data{
+    height: 900px;
+    width: auto;
+    display: none;
 }
 
+.content .data .data_left{
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 900px;
+}
+.content .data .data_right{
+    position: relative;
+    float: right;
+    width: 45%;
+    height: 900px;
+}
+/* 底部 */
 .footer{
     width: 100%;
     height: 80px;
