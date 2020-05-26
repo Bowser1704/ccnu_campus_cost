@@ -1,8 +1,13 @@
 from models import model
 from utils.wc import generate
+import json
 
-if __name__ =="__main__":
-    stunum = "2018212576"
-    # print(model.get_first_data(stunum))
-    # print(model.get_most_restaurant(stunum))
-    generate.generate_place(stunum)
+if __name__ == "__main__":
+    stu_num = "2018212576"
+    cost = model.get_first_data(stu_num)
+    print(json.dumps(cost))
+    print(json.dumps(model.get_last_data(stu_num)))
+    print(json.dumps(model.get_cost_sum(stu_num)))
+    print(json.dumps(model.get_most_restaurant(stu_num)))
+    # print(model.get_most_restaurant(stu_num))
+    # generate.generate_place(stu_num)
