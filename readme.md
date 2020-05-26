@@ -32,7 +32,6 @@
       static/
          style.css
    models/
-   
    util/
       wordcloud/
       graph/
