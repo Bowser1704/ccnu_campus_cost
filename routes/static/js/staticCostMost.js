@@ -1,5 +1,6 @@
 var cost_most=echarts.init(document.getElementById('cost_most'));
 option = {
+    backgroundColor:'#90ee90',
     dataset: {
         source: [
             ['score', 'amount', 'product'],

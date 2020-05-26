@@ -29,7 +29,7 @@ body{
     float: right;
     position: absolute;
     right: 30%;
-    top: 50%;
+    top: 35%;
     margin-top: -60px;
 
 }
@@ -50,6 +50,21 @@ body{
 .header .input #stuId{
     padding: 10px;
     margin-top: 20px;
+}
+.button{
+    padding-top: 7px;
+}
+.button a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    background: #f20d0d;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
 }
 .rank{
     width: 100%;
