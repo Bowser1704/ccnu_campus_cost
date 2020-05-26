@@ -30,6 +30,7 @@ def result2dict(func):
         result = func(*args, **kwargs)
         dict_list = resultproxy2dict(result)
         return dict_list[0] if len(dict_list) == 1 else dict_list
+
     return wrapper
 
 
@@ -78,7 +79,6 @@ def get_most_restaurant(stu_num):
 
 @result2dict
 def get_cost_rank():
-
     sql = "SELECT stunum,sum(`cost`)AS costsum FROM stu3 GROUP BY stunum ORDER BY costsum DESC LIMIT 10"
 
     result = db.engine.execute(sql)
