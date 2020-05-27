@@ -43,7 +43,7 @@ body{
     font-family: 'Microsoft soft';
     background-color: #fff;
 }
-.header .input #name{
+.header .input #stuName{
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -95,6 +95,7 @@ body{
     left: 0;
     font-size: 14px;
 }
+
 /* .wordcloud{
     background: url("/wc/2017211652.png");
 } */
@@ -111,9 +112,10 @@ body{
 
 .content {
     height: 900px;
-    width: auto;
-    background-color: pink;
-
+    width: 100%;
+}
+.content .contentShow{
+    display: none;
 }
 .content .summery{
     height: 60px;
@@ -123,28 +125,26 @@ body{
     font-family: 'Source Han Sans CN';
 }
 .content .summery_left{
+    padding-left: 20px;
+    padding-top: 20px;
     height: 400px;
     width: 50%;
     background-color: #fff;
 }
-/* .content .data{
-    height: 900px;
-    width: auto;
-    display: none;
+.content p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 35px;
+    height: 35px;
+}
+.content span{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 35px;
+    height: 35px;
+    color: #f20d0d;
 }
 
-.content .data .data_left{
-    position: relative;
-    float: left;
-    width: 45%;
-    height: 900px;
-}
-.content .data .data_right{
-    position: relative;
-    float: right;
-    width: 45%;
-    height: 900px;
-} */
 /* 底部 */
 .footer{
     width: 100%;

@@ -27,7 +27,7 @@
     <div class="header">
         <div class="pic"></div>
         <div class="input">
-            <input type="text" name="name" id="name" placeholder="姓名">
+            <input type="text" name="name" id="stuName" placeholder="姓名">
             <input type="text" name="stuId" id="stuId" placeholder="学号">
             <p class="button">
                 <a href="javascript:void(0)" id="sigup-btn" class="btn">查询</a>
@@ -49,11 +49,20 @@
     </div>
     <div class="cf"></div>
     <div class="content">
-        <p class="summery"><span></span>个人年度总结</p>
-        <div class="summery_left">
-            <div></div>
+        <div class="contentShow" id="contentShow">
+            <p class="summery"><span></span>个人年度总结</p>
+            <div class="summery_left">
+                <div>
+                    <p>亲爱的：<span id="name"></span></p>
+                    <p>在2019-2020的一年中</p>
+                    <p>您一共消费了<span id="costSum"></span>。最爱的是<span id="resLove"></span>的<span id="placeLove"></span></p>
+                    <p>您的第一笔消费是<span id="timeFirst"></span>,在<span id="resFirst"></span>的<span id="placeFirst"></span></p>
+                    <p>您的最后一笔消费是<span id="timeLast"></span>,在<span id="resLast"></span>的<span id="placeLast"></span></p>
+                </div>
+            </div>
+            <div class="summery_right"></div>
         </div>
-        <div class="summery_right"></div>
+        
         <!-- 未构造完成 -->
         <!-- <div class="data">
             <div class="data_left">

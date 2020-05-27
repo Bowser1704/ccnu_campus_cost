@@ -19,7 +19,20 @@ $(document).ready(function(){
         
         
     }
+
     //请求相关数据
+    var name = document.getElementById('name'),
+        costSum = document.getElementById('costSum'),
+        resLove = document.getElementById('resLove'),
+        placeLove = document.getElementById('placeLove'),
+        timeFirst = document.getElementById('timeFirst'),
+        resFirst = document.getElementById('resFirst'),
+        placeFirst = document.getElementById('placeFirst'),
+        timeLast = document.getElementById('timeLast'),
+        resLast = document.getElementById('resLast'),
+        placeLast = document.getElementById('placeLast'),
+        contentShow = document.getElementById('contentShow');
+
     function getData(){
         var idValue = stuId[0].value;
         $.ajax({
@@ -27,11 +40,12 @@ $(document).ready(function(){
             type:'get',
             dataType:'json',
             success:function(data){
-                console.log(data);                   
+                timeFirst.innerText = data.time;
+                resFirst.innerText = data.restaurant;
+                placeFirst.innerText = data.place;                  
             },
             error:function(){
                 console.log("这部分的服务器罢工了，试试重新请求吧！");
-                
             },
         })
         $.ajax({
@@ -39,8 +53,9 @@ $(document).ready(function(){
             type:'get',
             dataType:'json',
             success:function(data){
-                console.log(data);
-                
+                timeLast.innerText = data.time;
+                resLast.innerText = data.restaurant;
+                placeLast.innerText = data.place;   
             }
         })
         
@@ -48,9 +63,8 @@ $(document).ready(function(){
             url:baseUrl+'/api/cost/sum/'+idValue,
             type:'get',
             dataType:'json',
-            success:function(data){
-                console.log(data);
-                
+            success:function(data){               
+                costSum.innerText = data['sum(cost)'];
             }
         })
         
@@ -59,10 +73,11 @@ $(document).ready(function(){
             type:'get',
             dataType:'json',
             success:function(data){
-                console.log(data);
-                
+                resLove.innerText = data.restaurant;
+                placeLove.innerText = data.place;
             }
         })
+        contentShow.style.display = 'block';
     }
     
 
