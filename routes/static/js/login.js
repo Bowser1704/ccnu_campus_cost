@@ -26,19 +26,22 @@ $(document).ready(function(){
         //验证输入学号有效
         var userReg = /^201[6-9]21[0-6]\d{3}$/;
         // console.log(idValue);
-        
-        if(!userReg.test(idValue) && checkStuName()){
-            stuIdInfo.innerHTML = '请输入有效学号哦！';
-        }else{
-            stuIdInfo.innerHTML = '';
-            signUp.addEventListener('click', getData,false);
-        } 
+        if(checkStuName()){
+            if( !userReg.test(idValue)){
+                stuIdInfo.innerHTML = '请输入有效学号哦！';
+            }else{
+                stuIdInfo.innerHTML = '';
+                signUp.addEventListener('click', getData,false);
+            } 
+        }
+
         
     }
     function checkStuName(){
         var stuNameValue = stuName.value;
         if(!stuNameValue){
-            stuNameInfo.innerHTML = '请输入有效姓名哦！';  
+            stuNameInfo.innerHTML = '请输入有效姓名哦！';
+            return false;  
         }else{
             stuNameInfo.innerHTML = '';
             return true;
@@ -94,7 +97,7 @@ $(document).ready(function(){
         name.innerHTML = stuName.value;
         contentShow.style.display = 'block';
     }
-    
+    stuName.addEventListener('blur',checkStuName,false);
     stuId.addEventListener('blur',checkStuId,false);
 
 
