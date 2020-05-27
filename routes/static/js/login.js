@@ -28,17 +28,41 @@ $(document).ready(function(){
             dataType:'json',
             success:function(data){
                 console.log(data);                   
+            },
+            error:function(){
+                console.log("这部分的服务器罢工了，试试重新请求吧！");
+                
+            },
+        })
+        $.ajax({
+            url:baseUrl+'/api/record/last/'+idValue,
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+                
             }
         })
         
+        $.ajax({
+            url:baseUrl+'/api/cost/sum/'+idValue,
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+                
+            }
+        })
         
-        console.log(baseUrl+'/api/record/first/'+idValue);
-
-        // $.get(baseUrl+'/api/record/first/'+idValue,
-        // function(data,status){
-        //     console.log(data);
-            
-        // })
+        $.ajax({
+            url:baseUrl+'/api/place/'+idValue,
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+                
+            }
+        })
     }
     
 

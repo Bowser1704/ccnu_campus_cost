@@ -1,6 +1,6 @@
 var cost_most=echarts.init(document.getElementById('cost_most'));
 option = {
-    backgroundColor:'#90ee90',
+
     dataset: {
         source: [
             ['score', 'amount', 'product'],
@@ -16,6 +16,11 @@ option = {
             [1, 9932.6, '2016213435']
         ]
     },
+    title:{
+        show:'true',
+        text:'消费金额排行榜',
+        left:'50%'
+    },
     grid: {containLabel: true},
     xAxis: {name: '消费总金额'},
     yAxis: {type: 'category',name:'学号'},
@@ -28,7 +33,7 @@ option = {
         // Map the score column to color
         dimension: 0,
         inRange: {
-            color: [ '#E15457','#D7DA8B']
+            color: [ '#D7DA8B','#E15457']
         }
     },
     series: [
