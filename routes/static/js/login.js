@@ -1,26 +1,9 @@
 $(document).ready(function(){
-    var signUp = $('#sigup-btn');
-    var stuId = $('#stuId');
+    var signUp = document.getElementById('sigup-btn');
+    var stuId = document.getElementById('stuId');
     var baseUrl = 'http://127.0.0.1:5000';
-    function checkId(){
-        
-        // console.log(idValue);
-        //验证输入学号有效
-        var userReg = /^\d{10}$/;
-        if(!userReg.test(idValue)){
-            
-        }
-        //发送学号数据
-        // $.ajax({
-        //     url:
-        // })
+    var stuName = document.getElementById('stuName');
 
-        
-        
-        
-    }
-
-    //请求相关数据
     var name = document.getElementById('name'),
         costSum = document.getElementById('costSum'),
         resLove = document.getElementById('resLove'),
@@ -33,8 +16,39 @@ $(document).ready(function(){
         placeLast = document.getElementById('placeLast'),
         contentShow = document.getElementById('contentShow');
 
+    var stuNameInfo = document.getElementById('stuName_info'),
+        stuIdInfo = document.getElementById('stuId_info');
+
+    function checkStuId (){
+
+        var idValue = stuId.value;
+        // console.log(idValue);
+        //验证输入学号有效
+        var userReg = /^201[6-9]21[0-6]\d{3}$/;
+        // console.log(idValue);
+        
+        if(!userReg.test(idValue) && checkStuName()){
+            stuIdInfo.innerHTML = '请输入有效学号哦！';
+        }else{
+            stuIdInfo.innerHTML = '';
+            signUp.addEventListener('click', getData,false);
+        } 
+        
+    }
+    function checkStuName(){
+        var stuNameValue = stuName.value;
+        if(!stuNameValue){
+            stuNameInfo.innerHTML = '请输入有效姓名哦！';  
+        }else{
+            stuNameInfo.innerHTML = '';
+            return true;
+        }
+    }
+
+    //请求相关数据
+    
     function getData(){
-        var idValue = stuId[0].value;
+        var idValue = stuId.value;
         $.ajax({
             url:baseUrl+'/api/record/first/'+idValue,
             type:'get',
@@ -77,12 +91,13 @@ $(document).ready(function(){
                 placeLove.innerText = data.place;
             }
         })
+        name.innerHTML = stuName.value;
         contentShow.style.display = 'block';
     }
     
+    stuId.addEventListener('blur',checkStuId,false);
 
 
-
-    signUp[0].addEventListener('click', getData,false);
+    
     
 })
