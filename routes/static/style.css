@@ -130,11 +130,13 @@ body{
     font-family: 'Source Han Sans CN';
 }
 .content .summery_left{
+    box-sizing: border-box;
     padding-left: 20px;
     padding-top: 20px;
     height: 400px;
     width: 50%;
     background-color: #fff;
+    float: left;
 }
 .content p{
     font-size: 24px;
@@ -148,8 +150,28 @@ body{
     line-height: 35px;
     height: 35px;
     color: #f20d0d;
+    display: inline-block;
 }
+.content .summery_right{
+    padding-top: 20px;
+    height: 400px;
+    width: 50%;
+    float: right;
+}
+.content .summery_right .wc_pic{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+   
 
+}
+.content .summery_right .wc_pic img{
+    width: 100%;
+}
+.content .summery_right p{
+    text-align: center;
+    padding-bottom: 10px;
+}
 /* 底部 */
 .footer{
     width: 100%;

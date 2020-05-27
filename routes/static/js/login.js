@@ -19,6 +19,7 @@ $(document).ready(function(){
     var stuNameInfo = document.getElementById('stuName_info'),
         stuIdInfo = document.getElementById('stuId_info');
 
+    var wcPic = document.getElementById('wcPic');
     function checkStuId (){
 
         var idValue = stuId.value;
@@ -52,6 +53,7 @@ $(document).ready(function(){
     
     function getData(){
         var idValue = stuId.value;
+        
         $.ajax({
             url:baseUrl+'/api/record/first/'+idValue,
             type:'get',
@@ -95,12 +97,14 @@ $(document).ready(function(){
             }
         })
         name.innerHTML = stuName.value;
+        wcPic.src = baseUrl + '/wc/' + idValue + '.png';
         contentShow.style.display = 'block';
     }
+
+
+
+
     stuName.addEventListener('blur',checkStuName,false);
     stuId.addEventListener('blur',checkStuId,false);
-
-
-    
-    
+  
 })
