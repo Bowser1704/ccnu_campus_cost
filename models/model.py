@@ -103,3 +103,13 @@ def get_place_list(stu_num):
     sql = "select place from stu3 where stunum = '{stu_num}'".format(stu_num=stu_num)
     result = db.engine.execute(sql)
     return [i[0] for i in result]
+
+
+# 通过学号 返回 食堂次数排名。
+
+@result2dict
+def get_restaurant_rank(stu_num):
+    sql = "select restaurant,count(*) from stu3 where stunum = '{stu_num}' group by restaurant order by count(*) desc".format(
+        stu_num=stu_num)
+    result = db.engine.execute(sql)
+    return result

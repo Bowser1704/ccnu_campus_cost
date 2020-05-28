@@ -28,6 +28,11 @@ def cost_rank():
     return jsonify(model.get_cost_rank())
 
 
-@app.route('/api/route/place', methods=['GET'])
+@app.route('/api/rank/place', methods=['GET'])
 def place_rank():
     return jsonify(model.get_restaurant_place_rank())
+
+
+@app.route('api/rank/restaurant/<stu_num>', methods=['GET'])
+def restaurant_rank(stu_num=None):
+    return jsonify(model.get_restaurant_rank(stu_num))
