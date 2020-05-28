@@ -26,7 +26,7 @@ option = {
     },
     grid: {containLabel: true},
     xAxis: {name: '刷卡次数'},
-    yAxis: {type: 'category',name:'restaurant/place'},
+    yAxis: {type: 'category',name:'窗口'},
     visualMap: {
         orient: 'horizontal',
         left: 'center',
