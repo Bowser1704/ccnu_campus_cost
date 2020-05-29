@@ -181,11 +181,67 @@ body{
     font-weight: 600;
     color: #2f83e4;
 }
+.second{
+    height: 400px;
+    position: relative;
+}
+.click_to_more{
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+}
+.read_more{
+    display: block;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    background: #2f83e4;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.more{
+    padding-top: 50px;
+}
+.more .more_left{
+    width: 30%;
+    height: 300px;
+    background-color: #7ae677;
+    float: left;
+}
+
+.more .more_right{
+    width: 70%;
+    height: 300px;
+    background-color: #531897;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 底部 */
 .footer{
     width: 100%;
     height: 80px;
-    background: #07cbc9;
+    background: #2f83e4;
     /* margin-top: 40px; */
 }
 .footer p{

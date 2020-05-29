@@ -1,7 +1,8 @@
 var baseUrl = 'http://127.0.0.1:5000';
+var stuId = document.getElementById('stuId');
 $(document).ready(function(){
     var signUp = document.getElementById('sigup-btn');
-    var stuId = document.getElementById('stuId');
+    
 
     var stuName = document.getElementById('stuName');
 
