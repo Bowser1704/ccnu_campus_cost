@@ -7,25 +7,18 @@
     <title>CCNU_CAMPUS_COST</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/base.css">
-    <link rel="stylesheet" href="../static/main.css">
+    <!-- <link rel="stylesheet" href="../static/main.css"> -->
     <script src="../static/js/echarts.min.js"></script>
     <script src="../static/js/jquery-1.12.4.min.js"></script>
-    <!-- <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $.get("http://api.tianapi.com/txapi/ncovcity/index?key=3e26d27ac31d3d77789885a711142326",
-                function(data,status){
-		            console.log(data);
-		            $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
-                    alert("状态码：" + data.code + "\n消息：" + data.msg);
-                });
-            });
-        });
-    </script> -->
 </head>
 <body>
     <div class="header">
-        <div class="pic"></div>
+        <div class="pic_change">
+            <div class="pic pic1" id="pic"></div>
+            <p class="button">
+                <a href="javascript:void(0)" id="pic_change" class="btn">切换头像</a>
+            </p>
+        </div>
         <div class="input">
             <div>
                 <input type="text" name="name" id="stuName" placeholder="姓名">
@@ -99,5 +92,6 @@
     <script src="../static/js/staticCostMost.js"></script>
     <script src="../static/js/staticCostumeCount.js"></script>
     <script src="../static/js/login.js"></script>
+    <script src="../static/js/moreInformation.js"></script>
 </body>
 </html>
