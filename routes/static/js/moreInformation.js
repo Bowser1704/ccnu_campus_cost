@@ -41,10 +41,18 @@ $(document).ready(function(){
             }
         })
         $.ajax({
-            url:baseUrl+'/api/rank/restaurant/'+idValue,
+            url:baseUrl+'/api/cost/list/week/'+idValue,
             type:'get',
             dataType:'json',
-            success:function(){
+            success:function(data){
+                console.log(data);
+                
+                var preWeekCost = [];
+                for(let i = 0; i < data.length;i++){
+                    preWeekCost.push(data[i]['sum(cost)'])
+                }
+                console.log(preWeekCost);
+                
                 
             }
         })

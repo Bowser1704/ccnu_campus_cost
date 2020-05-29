@@ -13,6 +13,16 @@ def last(stu_num=None):
     return jsonify(model.get_last_data(stu_num))
 
 
+@app.route('/api/rank/restaurant/<stu_num>', methods=['GET'])
+def restaurant_rank(stu_num=None):
+    return jsonify(model.get_restaurant_rank(stu_num))
+
+
+@app.route('/api/cost/list/week/<stu_num>', methods=['GET'])
+def cost_list(stu_num=None):
+    return jsonify(model.get_sum_every_week(stu_num))
+
+
 @app.route('/api/cost/sum/<stu_num>', methods=['GET'])
 def cost(stu_num=None):
     return jsonify(model.get_cost_sum(stu_num))
@@ -31,8 +41,3 @@ def cost_rank():
 @app.route('/api/rank/place', methods=['GET'])
 def place_rank():
     return jsonify(model.get_restaurant_place_rank())
-
-
-@app.route('/api/rank/restaurant/<stu_num>', methods=['GET'])
-def restaurant_rank(stu_num=None):
-    return jsonify(model.get_restaurant_rank(stu_num))

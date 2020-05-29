@@ -13,4 +13,5 @@ if __name__ == "__main__":
     # print(json.dumps(model.get_restaurant_place_rank()))
     # print(model.get_most_restaurant(stu_num))
     # generate.generate_place(stu_num)
-    print(model.get_restaurant_rank(stu_num))
+    # print(model.get_restaurant_rank(stu_num))
+    # print(model.get_sum_every_week(stu_num))

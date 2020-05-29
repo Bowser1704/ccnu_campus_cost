@@ -113,3 +113,9 @@ def get_restaurant_rank(stu_num):
         stu_num=stu_num)
     result = db.engine.execute(sql)
     return result
+
+@result2dict
+def get_sum_every_week(stu_num):
+    sql = "select sum(cost) from stu3 where stunum = '{stu_num}' group by week(time)".format(stu_num=stu_num)
+    result = db.engine.execute(sql)
+    return result
