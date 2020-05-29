@@ -78,3 +78,14 @@ input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
 input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
 	color:#7ae677;
 }
+
+.line{
+	height: 0;
+	width: 1200px;
+	border-bottom: 2px solid #ffbb27;
+	position: relative;
+	left: 50%;
+	margin-left: -600px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}

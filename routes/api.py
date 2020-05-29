@@ -33,6 +33,6 @@ def place_rank():
     return jsonify(model.get_restaurant_place_rank())
 
 
-@app.route('api/rank/restaurant/<stu_num>', methods=['GET'])
+@app.route('/api/rank/restaurant/<stu_num>', methods=['GET'])
 def restaurant_rank(stu_num=None):
     return jsonify(model.get_restaurant_rank(stu_num))

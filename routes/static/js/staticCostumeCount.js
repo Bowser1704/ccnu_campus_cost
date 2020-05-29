@@ -19,15 +19,13 @@ option = {
     title:{
         show:'true',
         text:'窗口消费次数排行榜',
-        subtextStyle:{
-            fontWeight:'',
-        },
         left:'50%'
     },
     grid: {containLabel: true},
     xAxis: {name: '刷卡次数'},
     yAxis: {type: 'category',name:'窗口'},
     visualMap: {
+        show:'false',
         orient: 'horizontal',
         left: 'center',
         min: 1,
@@ -36,7 +34,7 @@ option = {
         // Map the score column to color
         dimension: 0,
         inRange: {
-            color: [ '#D7DA8B','#E15457']
+            color: [ '#23cbff','#2f83e4']
         }
     },
     series: [

@@ -6,6 +6,7 @@ $(document).ready(function(){
     var stuName = document.getElementById('stuName');
 
     var name = document.getElementById('name'),
+        name1 = document.getElementById('name1'),
         costSum = document.getElementById('costSum'),
         resLove = document.getElementById('resLove'),
         placeLove = document.getElementById('placeLove'),
@@ -98,6 +99,7 @@ $(document).ready(function(){
             }
         })
         name.innerHTML = stuName.value;
+        name1.innerHTML = stuName.value;
         wcPic.src = baseUrl + '/wc/' + idValue + '.png';
         contentShow.style.display = 'block';
     }
