@@ -4,7 +4,7 @@ from utils.wc import generate
 import os
 from pathlib import Path
 
-
+# 返回词云 以png方式 内联图片
 @app.route("/wc/<stu_num>.png", methods=['GET'])
 def wc(stu_num=None):
     dir_path = os.getcwd() + "/utils/wc/tmp/"
