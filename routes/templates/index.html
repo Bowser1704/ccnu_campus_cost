@@ -7,25 +7,18 @@
     <title>CCNU_CAMPUS_COST</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/base.css">
-    <link rel="stylesheet" href="../static/main.css">
+    <!-- <link rel="stylesheet" href="../static/main.css"> -->
     <script src="../static/js/echarts.min.js"></script>
     <script src="../static/js/jquery-1.12.4.min.js"></script>
-    <!-- <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $.get("http://api.tianapi.com/txapi/ncovcity/index?key=3e26d27ac31d3d77789885a711142326",
-                function(data,status){
-		            console.log(data);
-		            $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
-                    alert("状态码：" + data.code + "\n消息：" + data.msg);
-                });
-            });
-        });
-    </script> -->
 </head>
 <body>
     <div class="header">
-        <div class="pic"></div>
+        <div class="pic_change">
+            <div class="pic pic1" id="pic"></div>
+            <p class="button">
+                <a href="javascript:void(0)" id="pic_change" class="btn">切换头像</a>
+            </p>
+        </div>
         <div class="input">
             <div>
                 <input type="text" name="name" id="stuName" placeholder="姓名">
@@ -41,7 +34,7 @@
         </div>
     </div>
     <div class="cf"></div>
-    
+    <div class="line"></div>
     <div class="rank">
         <!-- <h1>排行榜</h1> -->
         <div class="data_first">
@@ -55,16 +48,17 @@
         <!-- <div class="wordcloud"></div> -->
     </div>
     
-    <div class="content">
-        <div class="contentShow" id="contentShow">
-            <p class="summery"><span></span>个人年度总结</p>
+    <div class="content contentShow" id="contentShow">
+        <div  >
+            <div class="line"></div>
+            <p class="summery"><span id="name1"></span>个人年度总结</p>
             <div class="summery_left">
                 <div>
                     <p>亲爱的：<span id="name"></span></p>
                     <p></p>
                     <p>在2019-2020的一年中</p>
                     <p></p>
-                    <p>您一共消费了<span id="costSum"></span>。最爱的是<span id="resLove"></span>的<span id="placeLove"></span></p>
+                    <p>您一共消费了<span id="costSum"></span>元。最爱的是<span id="resLove"></span>的<span id="placeLove"></span></p>
                     <p></p>
                     <p>您的第一笔消费是<span id="timeFirst"></span>,在<span id="resFirst"></span>的<span id="placeFirst"></span></p>
                     <p></p>
@@ -75,29 +69,29 @@
                 <p>年度消费词云</p>
                 <div class="wc_pic">
                     <img id="wcPic" src="">
-                </div>
-                
-                
+                </div>   
             </div>
         </div>
         <div class="cf"></div>
-        <!-- 未构造完成 -->
-        <!-- <div class="data">
-            <div class="data_left">
-                <div id="l1"></div>
-                <div id="l2"></div>
+        <div class="contentShow second" id="second_show">
+            <div class="line"></div>
+            <div class="click_to_more">
+                <a href="javascript:void(0)" id="read_more" class="read_more">查看更多数据</a>
             </div>
-            <div class="data_right">
-                <div id="r1"></div>
-                <div id="r2"></div>
+            <div class="more" >
+                <div class="more_left" id="left"></div>
+                <div class="more_right" id="right"></div>
             </div>
-        </div> -->
+        </div>
+        
     </div>
+    <div class="cf"></div>
     <div class="footer">
-        <p>&copy;2020 CCNU_CAMPUS_COST.com 京ICP备13046642号o(*￣▽￣*)ブ</p>
+        <p>&copy;2020 CCNU_CAMPUS_COST.com o(*￣▽￣*)ブ</p>
     </div>
     <script src="../static/js/staticCostMost.js"></script>
     <script src="../static/js/staticCostumeCount.js"></script>
     <script src="../static/js/login.js"></script>
+    <script src="../static/js/moreInformation.js"></script>
 </body>
 </html>

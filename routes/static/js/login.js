@@ -1,10 +1,13 @@
+var baseUrl = 'http://127.0.0.1:5000';
+var stuId = document.getElementById('stuId');
 $(document).ready(function(){
     var signUp = document.getElementById('sigup-btn');
-    var stuId = document.getElementById('stuId');
-    var baseUrl = 'http://127.0.0.1:5000';
+    
+
     var stuName = document.getElementById('stuName');
 
     var name = document.getElementById('name'),
+        name1 = document.getElementById('name1'),
         costSum = document.getElementById('costSum'),
         resLove = document.getElementById('resLove'),
         placeLove = document.getElementById('placeLove'),
@@ -14,7 +17,8 @@ $(document).ready(function(){
         timeLast = document.getElementById('timeLast'),
         resLast = document.getElementById('resLast'),
         placeLast = document.getElementById('placeLast'),
-        contentShow = document.getElementById('contentShow');
+        contentShow = document.getElementById('contentShow'),
+        secondShow = document.getElementById('second_show');
 
     var stuNameInfo = document.getElementById('stuName_info'),
         stuIdInfo = document.getElementById('stuId_info');
@@ -97,8 +101,10 @@ $(document).ready(function(){
             }
         })
         name.innerHTML = stuName.value;
+        name1.innerHTML = stuName.value;
         wcPic.src = baseUrl + '/wc/' + idValue + '.png';
         contentShow.style.display = 'block';
+        secondShow.style.display = 'block';
     }
 
 
