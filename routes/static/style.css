@@ -125,7 +125,7 @@ body{
     height: 900px;
     width: 100%;
 }
-.content .contentShow{
+.contentShow{
     display: none;
 }
 .content .summery,#name1{
@@ -208,14 +208,14 @@ body{
 .more .more_left{
     width: 30%;
     height: 300px;
-    background-color: #7ae677;
+    
     float: left;
 }
 
 .more .more_right{
     width: 70%;
     height: 300px;
-    background-color: #531897;
+    
     float: right;
 }
 

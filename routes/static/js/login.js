@@ -17,7 +17,8 @@ $(document).ready(function(){
         timeLast = document.getElementById('timeLast'),
         resLast = document.getElementById('resLast'),
         placeLast = document.getElementById('placeLast'),
-        contentShow = document.getElementById('contentShow');
+        contentShow = document.getElementById('contentShow'),
+        secondShow = document.getElementById('second_show');
 
     var stuNameInfo = document.getElementById('stuName_info'),
         stuIdInfo = document.getElementById('stuId_info');
@@ -103,6 +104,7 @@ $(document).ready(function(){
         name1.innerHTML = stuName.value;
         wcPic.src = baseUrl + '/wc/' + idValue + '.png';
         contentShow.style.display = 'block';
+        secondShow.style.display = 'block';
     }
 
 
