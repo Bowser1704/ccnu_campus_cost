@@ -43,3 +43,5 @@
 1. 添加异常处理，如果没有收录这个人的学号，返回一些信息。
 
 2. mysql to clickhouse。
+
+3. svg or png?

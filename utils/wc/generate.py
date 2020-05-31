@@ -3,6 +3,7 @@ import os
 from models import model
 
 
+# 生成词云
 def generate(word_list, stu_num):
     module_path = os.path.dirname(__file__)
     wc = wordcloud.WordCloud(
